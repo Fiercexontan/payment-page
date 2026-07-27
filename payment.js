@@ -3,40 +3,40 @@ const PAYSTACK_PUBLIC_KEY = 'pk_live_d47dbe55f3aad7ec69fe10793782c602aa5e5e90';
 const services = [
   {
     id: 1,
-    title: 'Business Website',
-    description: 'Professional website with automated contact form and live deployment',
+    title: 'Web Solutions',
+    description: 'Professional websites designed for businesses, portfolios, startups, and brands—with performance, scalability, and user experience in mind.',
     price: 12000000,
     display_price: '$80 / ₦120,000',
     icon: '🌐'
   },
   {
     id: 2,
-    title: 'Automation System',
-    description: 'Custom Python automation that handles your repetitive business tasks',
+    title: 'Automation Strategy',
+    description: 'Custom workflow automation that eliminates repetitive work and connects the tools your business relies on.',
     price: 15000000,
     display_price: '$100 / ₦150,000',
     icon: '🤖'
   },
   {
     id: 3,
-    title: 'Telegram or WhatsApp Bot',
-    description: 'Intelligent bot that handles customer messages 24/7 automatically',
+    title: 'Bot Development',
+    description: 'Custom bots for Telegram, WhatsApp, Discord, and other platforms that automate communication and business processes.',
     price: 12000000,
     display_price: '$80 / ₦120,000',
     icon: '💬'
   },
   {
     id: 4,
-    title: 'PDF Invoice Generator',
-    description: 'Automated system that generates and sends professional invoices',
+    title: 'Technical Solutions',
+    description: 'Custom-built technical systems tailored to unique business requirements, internal operations, APIs, dashboards, and integrations.',
     price: 12000000,
     display_price: '$80 / ₦120,000',
     icon: '🧾'
   },
   {
     id: 5,
-    title: 'Full Business Package',
-    description: 'Complete system — website + automation + bot all in one package',
+    title: 'Complete Business Systems',
+    description: 'An end-to-end business solution combining web development, automation, bots, integrations, and technical consulting into one complete system.',
     price: 45000000,
     display_price: '$300 / ₦450,000',
     icon: '📦'
@@ -52,12 +52,13 @@ function renderServices() {
       <span class="service-icon">${service.icon}</span>
       <h3>${service.title}</h3>
       <p>${service.description}</p>
+      <div class="price-label">Starting from</div>
       <div class="service-price-wrap">
         <div class="service-price">${service.display_price}</div>
-        <span class="service-price-note">starting price</span>
       </div>
+      <p class="price-disclaimer">Final pricing depends on project scope, integrations, and business requirements.</p>
       <button class="pay-btn" onclick="initiatePayment(${service.id})">
-        Pay Now →
+        Start Your Project →
       </button>
     `;
     grid.appendChild(card);
